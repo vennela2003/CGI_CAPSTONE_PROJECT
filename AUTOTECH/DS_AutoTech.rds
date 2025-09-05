@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="DS_AutoTech">
+  <ConnectionProperties>
+    <Extension>OLEDB</Extension>
+    <ConnectString>Provider=OraOLEDB.Oracle.1;Data Source=localhost:1521/xepdb1</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>092f1fab-304b-4c40-b1bd-e4b518f5c1a6</DataSourceID>
+</RptDataSource>
