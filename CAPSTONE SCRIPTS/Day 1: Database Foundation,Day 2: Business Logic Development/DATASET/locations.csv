@@ -1,0 +1,16 @@
+Location ID,Location Name,Location Type,Country,Specialization,Production Capacity,Active Status
+BAN-001,Bangalore Plant 1,PLANT,India,Electronics,71060,Y
+DEL-002,Delhi Plant 2,PLANT,India,Control Cables,53455,Y
+HYD-003,Hyderabad Plant 3,WAREHOUSE,India,Control Cables,54773,Y
+NEW-001,New York Plant 1,WAREHOUSE,USA,Lighting,79370,Y
+CHI-002,Chicago Plant 2,RND_LAB,USA,Electronics,0,Y
+DAL-003,Dallas Plant 3,WAREHOUSE,USA,Lighting,35484,Y
+BER-001,Berlin Plant 1,PLANT,Germany,Lighting,36775,Y
+MUN-002,Munich Plant 2,PLANT,Germany,Lighting,59478,Y
+FRA-003,Frankfurt Plant 3,PLANT,Germany,Control Cables,31609,Y
+TOK-001,Tokyo Plant 1,WAREHOUSE,Japan,Brake Components,50405,Y
+OSA-002,Osaka Plant 2,WAREHOUSE,Japan,Brake Components,64638,Y
+NAG-003,Nagoya Plant 3,WAREHOUSE,Japan,Electronics,76639,Y
+SAO-001,Sao Paulo Plant 1,WAREHOUSE,Brazil,Electronics,29893,Y
+RIO-002,Rio de Janeiro Plant 2,RND_LAB,Brazil,Control Cables,0,Y
+BRA-003,Brasilia Plant 3,RND_LAB,Brazil,Electronics,0,Y

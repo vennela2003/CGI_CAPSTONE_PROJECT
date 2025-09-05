@@ -1,0 +1,31 @@
+Supplier ID,Supplier Name,Country,Supplier Type,Quality Rating,Lead Time (days),Payment Terms,Certification Level,Active Status
+SUP-001,Yamaha Components Japan,Germany,OEM,4.0,12,45 days,TS16949,Y
+SUP-002,Bosch Auto Systems,Japan,OEM,3.6,19,30 days,ISO9001,Y
+SUP-003,Indus Plastics Pvt. Ltd.,Brazil,AFTERMARKET,4.2,27,60 days,ISO9001,Y
+SUP-004,AutoTronics Korea,Japan,OEM,4.0,25,60 days,ISO9001,Y
+SUP-005,Lighting Masters Co.,India,AFTERMARKET,3.7,20,60 days,ISO9001,Y
+SUP-006,Bremac Brake Solutions,Brazil,OEM,3.6,24,45 days,ISO9001,Y
+SUP-007,Shenzhen Cable Works,Germany,AFTERMARKET,4.9,22,45 days,TS16949,Y
+SUP-008,MagnoMetal Components,Brazil,OEM,4.7,30,45 days,ISO9001,Y
+SUP-009,MechForge Poland,Germany,OEM,4.3,22,45 days,TS16949,Y
+SUP-010,ThaiTech Assemblies,Brazil,OEM,4.0,28,60 days,ISO9001,Y
+SUP-011,Sunbeam Cable Co.,Germany,AFTERMARKET,5.0,22,30 days,ISO9001,Y
+SUP-012,Nitra Electronic Ltd.,Germany,AFTERMARKET,4.5,20,30 days,ISO9001,Y
+SUP-013,Eltronix Mexico,Japan,AFTERMARKET,3.5,19,30 days,ISO9001,Y
+SUP-014,Global Auto Parts S.A.,Germany,AFTERMARKET,3.8,14,30 days,ISO9001,Y
+SUP-015,AutoLux Instruments,Germany,OEM,4.3,27,60 days,ISO9001,Y
+SUP-016,K-Cable Industries,Germany,OEM,4.4,14,30 days,ISO9001,Y
+SUP-017,EagleVision Electronics,Brazil,OEM,4.6,11,45 days,TS16949,Y
+SUP-018,NovaLite Optics Inc.,USA,AFTERMARKET,4.4,24,30 days,ISO9001,Y
+SUP-019,TractoBrake Industries,Germany,AFTERMARKET,4.9,16,45 days,TS16949,Y
+SUP-020,EuroForge Romania,Japan,AFTERMARKET,4.7,26,60 days,TS16949,Y
+SUP-021,QuickFit Assemblers,USA,OEM,4.7,14,45 days,ISO9001,Y
+SUP-022,Apex Cables International,Japan,AFTERMARKET,4.3,13,60 days,ISO9001,Y
+SUP-023,AutoLink Components,Germany,OEM,4.6,18,45 days,ISO9001,Y
+SUP-024,Northern Brake Technologies,Japan,OEM,4.9,17,45 days,TS16949,Y
+SUP-025,Zeon Plastics & Mouldings,India,AFTERMARKET,3.6,26,45 days,ISO9001,Y
+SUP-026,Titan Auto Electric,Japan,OEM,4.1,10,45 days,ISO9001,Y
+SUP-027,Lightspeed OptoTech,Germany,OEM,3.7,19,45 days,ISO9001,Y
+SUP-028,MacroMotion Tech Ltd.,Japan,AFTERMARKET,4.4,12,30 days,TS16949,Y
+SUP-029,Equinox Components Ltd.,USA,OEM,4.3,29,60 days,TS16949,Y
+SUP-030,OmniDrive Gearworks,India,AFTERMARKET,3.9,13,30 days,ISO9001,Y
