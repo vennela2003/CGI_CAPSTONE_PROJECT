@@ -1,0 +1,2000 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/25/2025 2:29:15 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SAKSHI"
+  DTS:CreatorName="SAKSHI\User"
+  DTS:DTSID="{D37FD939-C78C-4E6C-9086-5D919F41F9DA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="ProductionData_ETL"
+  DTS:PackageType="5"
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{CAAC3215-A0A9-422E-95E8-320A5035F39E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_Input]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{81819BE2-52A1-4329-B806-0472556A6368}"
+      DTS:ObjectName="FF_Input">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\CAPSTONE_PROJECT\UPDATED_DATASET\products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product ID"
+              DTS:DTSID="{A88309FF-277C-498B-B889-C64DCC0CA306}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product Name"
+              DTS:DTSID="{88304E92-8649-4846-93B6-C58B066446FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{5BDFC583-8D7C-4225-B9C4-D412B12DE07A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Cost"
+              DTS:DTSID="{B5E3E25C-660B-4D00-BDC0-6AF4EC1C9BAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weight (in kg)"
+              DTS:DTSID="{094BFD56-F8DE-4482-98CE-B7AC397EB713}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Automotive Grade"
+              DTS:DTSID="{2D4A361B-5604-41AD-BEC4-5AA78F2A9AA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Active Status"
+              DTS:DTSID="{705ABD32-8DAD-4D9D-9A2B-ABCAB2BE3551}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created Date"
+              DTS:DTSID="{30BBDA43-7E69-4444-8BF0-E8F7A7250E83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated Date"
+              DTS:DTSID="{E3FBB323-73A7-4074-AF68-0BD942D63396}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_Outputfile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{ABA23F2C-7347-4A23-9292-C0A8F766550D}"
+      DTS:ObjectName="FF_Outputfile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\CAPSTONE_PROJECT\UPDATED_DATASET\products_output.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{3D045C2B-3B98-4B4E-906F-5968532EBE18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CreatedDate_DT"
+              DTS:DTSID="{B7062507-1EBE-40E1-87A4-A530240C7C61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_weight"
+              DTS:DTSID="{8E6BC9E9-E36D-4198-B43F-CE6EC288C04E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Avg_unit_cost"
+              DTS:DTSID="{BFE9DDEE-2094-4787-B150-0D46F16B2D59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_products"
+              DTS:DTSID="{1D84169F-FC22-4562-B412-2A1B4A0A531D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_Rejected]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{81E6DAB8-BEA7-4004-872D-9E5535ED9842}"
+      DTS:ObjectName="FF_Rejected">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\CAPSTONE_PROJECT\UPDATED_DATASET\products_rejected.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product ID"
+              DTS:DTSID="{0E2BDD20-B0D6-4D97-8921-687C71773E37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product Name"
+              DTS:DTSID="{33876228-4928-45C7-9F7C-E3500AB08459}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{6BF9CA62-7268-4E8F-BA25-6D6083AF88F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Cost"
+              DTS:DTSID="{C5DEEB8B-4C51-4F5F-96D0-F7B4055D63F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weight (in kg)"
+              DTS:DTSID="{933B0698-25A1-4C0A-80FB-6D95FA338DFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Automotive Grade"
+              DTS:DTSID="{E6344CC9-B5AF-404E-B059-DABC4A956D54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Active Status"
+              DTS:DTSID="{85634747-0617-4367-B3ED-AC08BBCA79DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created Date"
+              DTS:DTSID="{5028A061-98AC-4968-8A1E-1ECFE1B0A2FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated Date"
+              DTS:DTSID="{B511C1B3-4FC5-4C36-B1F9-61556A3E6A40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CreatedDate_DT"
+              DTS:DTSID="{00774C32-6885-42AD-903A-6F47EDA5D2DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{734F3377-7CCA-42F1-A95C-E432DBA4FA82}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorReason"
+              DTS:DTSID="{7B4225B1-3F45-40FE-B06A-520546ADD24E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DF Production Data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{78E2C4E8-A5B5-45AE-85C0-18EA46AFE149}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF Production Data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF Production Data\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DF Production Data\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Production Data\Aggregate.Inputs[Aggregate Input 1].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Aggregate.Inputs[Aggregate Input 1].Columns[CreatedDate_DT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate_DT"
+                      lineageId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Output].Columns[CreatedDate_DT]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Aggregate.Inputs[Aggregate Input 1].Columns[C_Weight (in kg)]"
+                      cachedDataType="numeric"
+                      cachedName="C_Weight (in kg)"
+                      cachedPrecision="10"
+                      cachedScale="3"
+                      lineageId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Weight (in kg)]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Aggregate.Inputs[Aggregate Input 1].Columns[C_Unit Cost]"
+                      cachedDataType="numeric"
+                      cachedName="C_Unit Cost"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      lineageId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Category]"
+                      name="Category">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[CreatedDate_DT]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[CreatedDate_DT]"
+                      name="CreatedDate_DT">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Output].Columns[CreatedDate_DT]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Total_weight]"
+                      dataType="numeric"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Total_weight]"
+                      name="Total_weight"
+                      precision="10"
+                      scale="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Weight (in kg)]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Avg_unit_cost]"
+                      dataType="numeric"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Avg_unit_cost]"
+                      name="Avg_unit_cost"
+                      precision="10"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Production Data\CS FOR VALIDATION"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="CS FOR VALIDATION"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input].Columns[Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input].Columns[Unit Cost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Unit Cost"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input].Columns[Weight (in kg)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Weight (in kg)"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input].Columns[Automotive Grade]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Automotive Grade"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Production Data\CS FOR VALIDATION.Outputs[BadRows]"
+                  description="Output 5 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="BadRows"
+                  synchronousInputId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}) || [TRIM](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}) == "" || (DT_NUMERIC,10,2)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]} &lt; 0 || [ISNULL](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]}) || (DT_NUMERIC,10,3)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]} &lt;= 0 || !(#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]} == "Y" || #{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]} == "N")</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL([Product ID]) || TRIM([Product ID]) == "" || (DT_NUMERIC,10,2)[Unit Cost] &lt; 0 || ISNULL([Weight (in kg)]) || (DT_NUMERIC,10,3)[Weight (in kg)] &lt;= 0 || !([Automotive Grade] == "Y" || [Automotive Grade] == "N")</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF Production Data\CS FOR VALIDATION.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF Production Data\CS FOR VALIDATION.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\CS FOR VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\CS FOR VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Production Data\CS FOR VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\CS FOR VALIDATION.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Production Data\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF Production Data\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Production Data\Data Conversion.Inputs[Data Conversion Input].Columns[Weight (in kg)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Weight (in kg)"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Data Conversion.Inputs[Data Conversion Input].Columns[Unit Cost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Unit Cost"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DF Production Data\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Weight (in kg)]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Weight (in kg)]"
+                      name="C_Weight (in kg)"
+                      precision="10"
+                      scale="3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost]"
+                      name="C_Unit Cost"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DF Production Data\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Production Data\DC_FOR CLEANUP"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DC_FOR CLEANUP"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input].Columns[Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM([Product ID])</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[TRIM](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">TRIM(Category)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input].Columns[Unit Cost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Unit Cost"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_NUMERIC,10,2)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,10,2)[Unit Cost]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input].Columns[Weight (in kg)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Weight (in kg)"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_NUMERIC,10,2)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,10,2)[Weight (in kg)]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input].Columns[Created Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Created Date"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Output].Columns[CreatedDate_DT]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Output].Columns[CreatedDate_DT]"
+                      name="CreatedDate_DT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBTIMESTAMP)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created Date]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBTIMESTAMP)[Created Date]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Production Data\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input].Columns[Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input].Columns[Unit Cost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Unit Cost"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input].Columns[Weight (in kg)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Weight (in kg)"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input].Columns[Automotive Grade]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Automotive Grade"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}) || [TRIM](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}) == "") ? 1 : ((DT_NUMERIC,10,2)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]} &lt; 0) ? 2 : ([ISNULL](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]}) || (DT_NUMERIC,10,3)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]} &lt;= 0) ? 3 : !(#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]} == "Y" || #{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]} == "N") ? 4 : 0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL([Product ID]) || TRIM([Product ID]) == "") ? 1 : ((DT_NUMERIC,10,2)[Unit Cost] &lt; 0) ? 2 : (ISNULL([Weight (in kg)]) || (DT_NUMERIC,10,3)[Weight (in kg)] &lt;= 0) ? 3 : !([Automotive Grade] == "Y" || [Automotive Grade] == "N") ? 4 : 0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="25"
+                      lineageId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output].Columns[ErrorReason]"
+                      name="ErrorReason"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">([ISNULL](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}) || [TRIM](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]}) == "") ? "Missing Product ID" : ((DT_NUMERIC,10,2)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]} &lt; 0) ? "Negative Unit Cost" : ([ISNULL](#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]}) || (DT_NUMERIC,10,3)#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]} &lt;= 0) ? "Invalid or Missing Weight" : !(#{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]} == "Y" || #{Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]} == "N") ? "Invalid Automotive Grade" : "Unknown Error"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(ISNULL([Product ID]) || TRIM([Product ID]) == "") ? "Missing Product ID" : ((DT_NUMERIC,10,2)[Unit Cost] &lt; 0) ? "Negative Unit Cost" : (ISNULL([Weight (in kg)]) || (DT_NUMERIC,10,3)[Weight (in kg)] &lt;= 0) ? "Invalid or Missing Weight" : !([Automotive Grade] == "Y" || [Automotive Grade] == "N") ? "Invalid Automotive Grade" : "Unknown Error"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF Production Data\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Production Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Production Data\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF Production Data\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_Input]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_Input]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]"
+                      name="Product ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product Name]"
+                      name="Product Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                      name="Unit Cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weight (in kg)]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]"
+                      name="Weight (in kg)"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Automotive Grade]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]"
+                      name="Automotive Grade"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Active Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Active Status]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Active Status]"
+                      name="Active Status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Created Date]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created Date]"
+                      name="Created Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated Date]"
+                      length="50"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated Date]"
+                      name="Last Updated Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Product ID" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Product Name" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Unit Cost" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weight (in kg)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Weight (in kg)" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Automotive Grade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Automotive Grade" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Active Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Active Status" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Created Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created Date" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Updated Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF Production Data\Products_output"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Products_output"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF Production Data\Products_output.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_Outputfile]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_Outputfile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].Columns[CreatedDate_DT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate_DT"
+                      externalMetadataColumnId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[CreatedDate_DT]"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[CreatedDate_DT]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].Columns[Total_weight]"
+                      cachedDataType="numeric"
+                      cachedName="Total_weight"
+                      cachedPrecision="10"
+                      cachedScale="3"
+                      externalMetadataColumnId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[Total_weight]"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Total_weight]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].Columns[Avg_unit_cost]"
+                      cachedDataType="numeric"
+                      cachedName="Avg_unit_cost"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[Avg_unit_cost]"
+                      lineageId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1].Columns[Avg_unit_cost]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[CreatedDate_DT]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate_DT" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[Total_weight]"
+                      dataType="numeric"
+                      name="Total_weight"
+                      precision="10"
+                      scale="3" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[Avg_unit_cost]"
+                      dataType="numeric"
+                      name="Avg_unit_cost"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input].ExternalColumns[Total_products]"
+                      dataType="ui8"
+                      name="Total_products" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DF Production Data\Rejected"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Rejected"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF Production Data\Rejected.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_Rejected]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_Rejected]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Product ID]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Product Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product Name"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Product Name]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Product Name]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Unit Cost]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Unit Cost"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Unit Cost]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Weight (in kg)]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Weight (in kg)"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Weight (in kg)]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Weight (in kg)]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Automotive Grade]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Automotive Grade"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Automotive Grade]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Automotive Grade]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Active Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Active Status"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Active Status]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Active Status]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Created Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Created Date"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Created Date]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Created Date]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[Last Updated Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Updated Date"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Last Updated Date]"
+                      lineageId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output].Columns[Last Updated Date]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[CreatedDate_DT]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate_DT"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[CreatedDate_DT]"
+                      lineageId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Output].Columns[CreatedDate_DT]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].Columns[ErrorReason]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="ErrorReason"
+                      externalMetadataColumnId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[ErrorReason]"
+                      lineageId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output].Columns[ErrorReason]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Product ID" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Product Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Product Name" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Unit Cost]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Unit Cost" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Weight (in kg)]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Weight (in kg)" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Automotive Grade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Automotive Grade" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Active Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Active Status" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Created Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Created Date" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[Last Updated Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Updated Date" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[CreatedDate_DT]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate_DT" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input].ExternalColumns[ErrorReason]"
+                      dataType="wstr"
+                      length="25"
+                      name="ErrorReason" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF Production Data.Paths[Aggregate Output 1]"
+              endId="Package\DF Production Data\Products_output.Inputs[Flat File Destination Input]"
+              name="Aggregate Output 1"
+              startId="Package\DF Production Data\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\DF Production Data.Paths[BadRows]"
+              endId="Package\DF Production Data\Derived Column.Inputs[Derived Column Input]"
+              name="BadRows"
+              startId="Package\DF Production Data\CS FOR VALIDATION.Outputs[BadRows]" />
+            <path
+              refId="Package\DF Production Data.Paths[Data Conversion Output]"
+              endId="Package\DF Production Data\Aggregate.Inputs[Aggregate Input 1]"
+              name="Data Conversion Output"
+              startId="Package\DF Production Data\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DF Production Data.Paths[Derived Column Output]"
+              endId="Package\DF Production Data\CS FOR VALIDATION.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF Production Data\DC_FOR CLEANUP.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF Production Data.Paths[Derived Column Output1]"
+              endId="Package\DF Production Data\Rejected.Inputs[Flat File Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DF Production Data\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF Production Data.Paths[Flat File Source Output]"
+              endId="Package\DF Production Data\DC_FOR CLEANUP.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\DF Production Data\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DF Production Data.Paths[Goodrows]"
+              endId="Package\DF Production Data\Data Conversion.Inputs[Data Conversion Input]"
+              name="Goodrows"
+              startId="Package\DF Production Data\CS FOR VALIDATION.Outputs[Conditional Split Default Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\DF Production Data"
+          TopLeft="135.833325911727,80.5999994395179" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DF Production Data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\DF Production Data\DC_FOR CLEANUP"
+          TopLeft="112.999998316169,157.999997645617" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\DF Production Data\Aggregate"
+          TopLeft="46.9999992996455,462.999993100762" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\DF Production Data\Products_output"
+          TopLeft="29.9999995529652,542.99999190867" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\DF Production Data\Rejected"
+          TopLeft="272.499995939434,552.499991767109" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DF Production Data\Derived Column"
+          TopLeft="277.222218025062,442.022215525375" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\DF Production Data\CS FOR VALIDATION"
+          TopLeft="106.999998405576,238.777774219712" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\DF Production Data\Flat File Source"
+          TopLeft="105.999998420477,48.9999992698431" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DF Production Data\Data Conversion"
+          TopLeft="131.999998033047,358.999994650483" />
+        <EdgeLayout
+          Id="Package\DF Production Data.Paths[Goodrows]"
+          TopLeft="169.133331738909,280.377774219712">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.8666662941377,78.6222204307716"
+              Start="0,0"
+              End="40.8666662941377,71.1222204307716">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.8590910615127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.8590910615127"
+                    Point2="0,31.8590910615127"
+                    Point3="4,31.8590910615127" />
+                  <mssgle:LineSegment
+                    End="36.8666662941377,31.8590910615127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.8666662941377,31.8590910615127"
+                    Point2="40.8666662941377,31.8590910615127"
+                    Point3="40.8666662941377,35.8590910615127" />
+                  <mssgle:LineSegment
+                    End="40.8666662941377,71.1222204307716" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.8417059154312,36.8590910615127,158.550078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF Production Data.Paths[Flat File Source Output]"
+          TopLeft="181.599998420477,90.5999992698431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.7999998956919,67.3999983757735"
+              Start="0,0"
+              End="17.7999998956919,59.8999983757735">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.6999991878867" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.6999991878867"
+                    Point2="0,33.6999991878867"
+                    Point3="4,33.6999991878867" />
+                  <mssgle:LineSegment
+                    End="13.7999998956919,33.6999991878867" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.7999998956919,33.6999991878867"
+                    Point2="17.7999998956919,33.6999991878867"
+                    Point3="17.7999998956919,37.6999991878867" />
+                  <mssgle:LineSegment
+                    End="17.7999998956919,59.8999983757735" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0.89999994784595,38.6999991878867,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF Production Data.Paths[Derived Column Output1]"
+          TopLeft="353.622218025062,483.622215525375">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-21.522222085628,68.8777762417336"
+              Start="0,0"
+              End="-21.522222085628,61.3777762417336">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4388881208668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.4388881208668"
+                    Point2="0,34.4388881208668"
+                    Point3="-4,34.4388881208668" />
+                  <mssgle:LineSegment
+                    End="-17.522222085628,34.4388881208668" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-17.522222085628,34.4388881208668"
+                    Point2="-21.522222085628,34.4388881208668"
+                    Point3="-21.522222085628,38.4388881208668" />
+                  <mssgle:LineSegment
+                    End="-21.522222085628,61.3777762417336" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-18.761111042814,39.4388881208668,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF Production Data.Paths[Derived Column Output]"
+          TopLeft="198.799998360872,199.599997645617">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.177776574095"
+              Start="0,0"
+              End="0,31.677776574095">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.677776574095" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,7.8388882870475,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF Production Data.Paths[Data Conversion Output]"
+          TopLeft="209.999998033047,400.599994650483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99.7999987334013,62.3999984502793"
+              Start="0,0"
+              End="-99.7999987334013,54.8999984502793">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1999992251396" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.1999992251396"
+                    Point2="0,31.1999992251396"
+                    Point3="-4,31.1999992251396" />
+                  <mssgle:LineSegment
+                    End="-95.7999987334013,31.1999992251396" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-95.7999987334013,31.1999992251396"
+                    Point2="-99.7999987334013,31.1999992251396"
+                    Point3="-99.7999987334013,35.1999992251396" />
+                  <mssgle:LineSegment
+                    End="-99.7999987334013,54.8999984502793" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.8999993667006,36.1999992251396,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF Production Data.Paths[BadRows]"
+          TopLeft="227.266665072243,280.377774219712">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.355552952819,161.644441305663"
+              Start="0,0"
+              End="126.355552952819,154.144441305663">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.5011388247297" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,61.5011388247297"
+                    Point2="0,65.5011388247297"
+                    Point3="4,65.5011388247297" />
+                  <mssgle:LineSegment
+                    End="122.355552952819,65.5011388247297" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.355552952819,65.5011388247297"
+                    Point2="126.355552952819,65.5011388247297"
+                    Point3="126.355552952819,69.5011388247297" />
+                  <mssgle:LineSegment
+                    End="126.355552952819,154.144441305663" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.6765460076597,70.5011388247297,59.0024609375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF Production Data.Paths[Aggregate Output 1]"
+          TopLeft="108.699999426305,504.599993100763">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.3999988079071"
+              Start="0,0"
+              End="0,30.8999988079071">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.8999988079071" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,7.44999940395355,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
