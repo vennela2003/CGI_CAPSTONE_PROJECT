@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AutoTech_DS</DataSourceReference>
+      <CommandText>SELECT sp.PERFORMANCE_ID, s.SUPPLIER_ID, s.SUPPLIER_NAME, s.COUNTRY, s.SUPPLIER_TYPE, sp.PO_NUMBER, sp.DELIVERY_DATE, sp.PROMISED_DATE, sp.PERFORMANCE_MONTH, sp.QUALITY_RATING, sp.QTY_DELIVERED, 
+                  sp.QTY_REJECTED, (CASE WHEN sp.QTY_DELIVERED &gt; 0 THEN ((sp.QTY_DELIVERED - NVL(sp.QTY_REJECTED, 0)) / sp.QTY_DELIVERED) * 100 ELSE 0 END) AS QUALITY_SCORE, (CASE WHEN sp.PROMISED_DATE IS NOT NULL 
+                  THEN (CASE WHEN sp.DELIVERY_DATE &lt;= sp.PROMISED_DATE THEN 100 ELSE 0 END) ELSE NULL END) AS ON_TIME_SCORE
+FROM     suppliers s, supplier_performance sp
+WHERE  (s.SUPPLIER_ID = sp.SUPPLIER_ID)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PERFORMANCE_ID">
+        <DataField>PERFORMANCE_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SUPPLIER_ID">
+        <DataField>SUPPLIER_ID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SUPPLIER_NAME">
+        <DataField>SUPPLIER_NAME</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="COUNTRY">
+        <DataField>COUNTRY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SUPPLIER_TYPE">
+        <DataField>SUPPLIER_TYPE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="PO_NUMBER">
+        <DataField>PO_NUMBER</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="DELIVERY_DATE">
+        <DataField>DELIVERY_DATE</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="PROMISED_DATE">
+        <DataField>PROMISED_DATE</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="PERFORMANCE_MONTH">
+        <DataField>PERFORMANCE_MONTH</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="QUALITY_RATING">
+        <DataField>QUALITY_RATING</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="QTY_DELIVERED">
+        <DataField>QTY_DELIVERED</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="QTY_REJECTED">
+        <DataField>QTY_REJECTED</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="QUALITY_SCORE">
+        <DataField>QUALITY_SCORE</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="ON_TIME_SCORE">
+        <DataField>ON_TIME_SCORE</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

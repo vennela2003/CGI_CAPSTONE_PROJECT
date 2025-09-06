@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AutoTech_DS</DataSourceReference>
+      <CommandText>SELECT DISTINCT PERFORMANCE_MONTH, COUNTRY
+FROM     suppliers s, supplier_performance sp
+WHERE  s.SUPPLIER_ID = sp.SUPPLIER_ID
+ORDER BY PERFORMANCE_MONTH, COUNTRY</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="PERFORMANCE_MONTH">
+        <DataField>PERFORMANCE_MONTH</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="COUNTRY">
+        <DataField>COUNTRY</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

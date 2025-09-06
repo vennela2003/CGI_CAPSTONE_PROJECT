@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "AutoTech_SSRS", "AutoTech_SSRS.rptproj", "{69D063D9-76BF-D66F-271C-213D02876E6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.Debug|Default.ActiveCfg = Debug
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.Debug|Default.Build.0 = Debug
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.Debug|Default.Deploy.0 = Debug
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.DebugLocal|Default.Build.0 = DebugLocal
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.Release|Default.ActiveCfg = Release
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.Release|Default.Build.0 = Release
+		{69D063D9-76BF-D66F-271C-213D02876E6D}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACD38C4E-E6D1-44E4-9223-4BF71056870A}
+	EndGlobalSection
+EndGlobal
