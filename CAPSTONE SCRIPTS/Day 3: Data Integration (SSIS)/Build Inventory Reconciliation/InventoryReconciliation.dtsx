@@ -1,0 +1,1776 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/25/2025 9:02:30 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SAKSHI"
+  DTS:CreatorName="SAKSHI\User"
+  DTS:DTSID="{143439D3-A970-4F6D-9630-4A521E16B3D3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="InventoryReconciliation"
+  DTS:PackageType="5"
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{0B8DC134-2A7E-4317-A6A3-D889B7DBC459}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_EXCEPTION]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{26972648-B1F7-485F-9179-316447FA8E26}"
+      DTS:ObjectName="FF_EXCEPTION">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\CAPSTONE_PROJECT\UPDATED_DATASET\exceptions.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{70863303-D4A1-4795-95C8-171A538F3A7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{3E0537BB-DC50-4EE1-8BDD-2B5C40E2D99A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{5F5C5598-B4A1-413B-AEFF-91B0049983FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{25C13AA6-C785-42CB-A7B6-147A888A5316}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{8B6EC6E7-FB36-47B3-A1EA-F81B86490C17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{29A1B713-0DB6-41C6-8C57-0AB0302B6C00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 6"
+              DTS:DTSID="{75C1DD40-4F87-46E9-B688-84CF147ADBB0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 7"
+              DTS:DTSID="{2705F39A-9B6D-4B56-A369-183F59994CFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 8"
+              DTS:DTSID="{8C5B749F-D12A-4BFA-B7C8-2D2947E95632}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 9"
+              DTS:DTSID="{3ED90FD4-17B3-4CEF-A5A6-81D8F73FF918}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 10"
+              DTS:DTSID="{6570962E-9D97-4F14-97BE-76DBE98678DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 11"
+              DTS:DTSID="{D24B70A0-5838-4F6D-B70B-0DC1DB114D99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 12"
+              DTS:DTSID="{AC277CCD-8F25-4FFA-945B-C8E5FB8F1298}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 13"
+              DTS:DTSID="{260ADCCC-2F21-4132-9B50-ABD135E9E384}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_IM]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EFFFDB3E-952A-40F9-93C0-B61708119520}"
+      DTS:ObjectName="FF_IM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\CAPSTONE_PROJECT\UPDATED_DATASET\inventory_master.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Inventory ID"
+              DTS:DTSID="{B485AC47-4524-4326-AEFA-29E290D4EFC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product ID"
+              DTS:DTSID="{D0E65934-77CE-4B88-AE0E-E0861B8D2954}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location ID"
+              DTS:DTSID="{EFDD3CDB-348C-424E-98B2-6E91F16811BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Current Stock Quantity"
+              DTS:DTSID="{D74016E2-8E6A-40BD-BC10-E3A756155048}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reorder Level"
+              DTS:DTSID="{CF00F761-5327-4DA9-85E9-85AB1064A1B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Maximum Stock Level"
+              DTS:DTSID="{C32E5628-8F78-43BC-801D-207691F5A90C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Safety Stock"
+              DTS:DTSID="{D287BBE6-2D28-42DC-A575-D18C1017A38F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Movement Date"
+              DTS:DTSID="{D6A1FDB1-36C2-4F5A-8782-A73D7B9F8E91}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Cost at Location"
+              DTS:DTSID="{1C4C78A8-70FC-4B37-9EA2-AE8A82A11CEE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_RECONCILIATION]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B9B5955E-B579-49F0-AC15-921F0FF49C78}"
+      DTS:ObjectName="FF_RECONCILIATION">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\CAPSTONE_PROJECT\UPDATED_DATASET\reconciliation_output.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{858AC8EC-B3D8-45B8-A644-16E43AD15495}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{A468F785-CD64-46D6-8019-50157A6ADD5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{F4DED56F-E564-46A2-97BA-DAE5C255A8A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{0C007FE3-87EF-4277-BD42-C98E89A35DDD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{37A3CA6F-69CF-41FE-80CF-8BE83509A8CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{13A4A3B4-7BB7-4DD0-B3EF-7359F03143FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 6"
+              DTS:DTSID="{A3B2A454-D0A1-46CC-8044-1ED236CC0C1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 7"
+              DTS:DTSID="{A94C28FF-5737-4F60-B14D-E5B413F01903}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 8"
+              DTS:DTSID="{3CB63D73-2A6E-46A0-9E6B-B4342B344AE7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 9"
+              DTS:DTSID="{ABB94461-4B00-49C6-B5F8-F938BCB232D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 10"
+              DTS:DTSID="{1383F6EF-BF3E-4135-B994-8A04109F1F62}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 11"
+              DTS:DTSID="{077CD2FB-1E47-4405-98C7-A9F033E9AB4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 12"
+              DTS:DTSID="{EBD5EB37-50E5-4575-852E-21A3976A7521}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 13"
+              DTS:DTSID="{16EFBB1E-113A-43C6-A111-A28656E62A88}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DF_INVENTORY_RECONCILIATION"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2914EA26-FB3E-4CED-9A4C-D07DBC2FE736}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DF_INVENTORY_RECONCILIATION"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Inputs[Conditional Split Input].Columns[Variance]"
+                      cachedDataType="i4"
+                      cachedName="Variance"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Variance]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Exception_Output]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Exception_Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ABS](#{Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Variance]}) &gt; 100</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ABS(Variance) &gt; 100</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Normal_Output]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Normal_Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ABS](#{Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Variance]}) &lt;= 100</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ABS(Variance) &lt;= 100</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Inputs[Data Conversion Input].Columns[Current Stock Quantity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Current Stock Quantity"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Inputs[Data Conversion Input].Columns[Unit Cost at Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Unit Cost at Location"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Unit Cost at Location]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Current Stock Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Current Stock Quantity]"
+                      name="C_Current Stock Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost at Location]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost at Location]"
+                      name="C_Unit Cost at Location"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Unit Cost at Location]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input].Columns[Current Stock Quantity]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Current Stock Quantity"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input].Columns[Reorder Level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Reorder Level"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Reorder Level]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input].Columns[Maximum Stock Level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Maximum Stock Level"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Maximum Stock Level]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input].Columns[Safety Stock]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Safety Stock"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Safety Stock]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Variance]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Variance]"
+                      name="Variance"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]} - (DT_I4)#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Safety Stock]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)[Current Stock Quantity] - (DT_I4)[Safety Stock]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Reorder_Flag]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Reorder_Flag]"
+                      name="Reorder_Flag"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">((DT_I4)#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]} &lt; (DT_I4)#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Reorder Level]}) ? "Y" : "N"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">((DT_I4)[Current Stock Quantity] &lt; (DT_I4)[Reorder Level]) ? "Y" : "N"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Overstock_Flag]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Overstock_Flag]"
+                      name="Overstock_Flag"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">((DT_I4)#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]} &gt; (DT_I4)#{Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Maximum Stock Level]}) ? "Y" : "N"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">((DT_I4)[Current Stock Quantity] &gt; (DT_I4)[Maximum Stock Level]) ? "Y" : "N"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_INVENTORY_RECONCILIATION\Exception"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Exception"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_EXCEPTION]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_EXCEPTION]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Inventory ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Inventory ID"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 0]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Inventory ID]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 1]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Location ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Location ID"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 2]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Location ID]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Reorder Level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Reorder Level"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 4]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Reorder Level]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Maximum Stock Level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Maximum Stock Level"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 5]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Maximum Stock Level]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Safety Stock]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Safety Stock"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 6]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Safety Stock]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Last Movement Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Movement Date"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 7]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Last Movement Date]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Variance]"
+                      cachedDataType="i4"
+                      cachedName="Variance"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 9]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Variance]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Reorder_Flag]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Reorder_Flag"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 10]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Reorder_Flag]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[Overstock_Flag]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Overstock_Flag"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 11]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Overstock_Flag]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[C_Unit Cost at Location]"
+                      cachedDataType="numeric"
+                      cachedName="C_Unit Cost at Location"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 8]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost at Location]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].Columns[C_Current Stock Quantity]"
+                      cachedDataType="i4"
+                      cachedName="C_Current Stock Quantity"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 3]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Current Stock Quantity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 3" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 4" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 5" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 6]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 6" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 7" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 8" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 9]"
+                      dataType="i4"
+                      name="Column 9" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 10]"
+                      dataType="numeric"
+                      name="Column 10"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 11]"
+                      dataType="i4"
+                      name="Column 11" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 12]"
+                      dataType="wstr"
+                      length="1"
+                      name="Column 12" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input].ExternalColumns[Column 13]"
+                      dataType="wstr"
+                      length="1"
+                      name="Column 13" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Inventory_Master"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_IM]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_IM]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Inventory ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Inventory ID]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Inventory ID]"
+                      name="Inventory ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Product ID]"
+                      name="Product ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Location ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Location ID]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Location ID]"
+                      name="Location ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Current Stock Quantity]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Current Stock Quantity]"
+                      name="Current Stock Quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Reorder Level]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Reorder Level]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Reorder Level]"
+                      name="Reorder Level"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Maximum Stock Level]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Maximum Stock Level]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Maximum Stock Level]"
+                      name="Maximum Stock Level"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Safety Stock]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Safety Stock]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Safety Stock]"
+                      name="Safety Stock"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Last Movement Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Last Movement Date]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Last Movement Date]"
+                      name="Last Movement Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Unit Cost at Location]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Unit Cost at Location]"
+                      length="50"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Unit Cost at Location]"
+                      name="Unit Cost at Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Inventory ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Inventory ID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Product ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Product ID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Location ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Location ID" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Current Stock Quantity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Current Stock Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Reorder Level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Reorder Level" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Maximum Stock Level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Maximum Stock Level" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Safety Stock]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Safety Stock" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Last Movement Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Movement Date" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].ExternalColumns[Unit Cost at Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Unit Cost at Location" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Reconciliation_output"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_RECONCILIATION]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_RECONCILIATION]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Product ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Product ID"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 1]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Product ID]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Location ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Location ID"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 2]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Location ID]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Reorder Level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Reorder Level"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 4]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Reorder Level]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Maximum Stock Level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Maximum Stock Level"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 5]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Maximum Stock Level]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Safety Stock]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Safety Stock"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 6]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Safety Stock]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Last Movement Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Movement Date"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 7]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Last Movement Date]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Variance]"
+                      cachedDataType="i4"
+                      cachedName="Variance"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 9]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Variance]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Reorder_Flag]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Reorder_Flag"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 10]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Reorder_Flag]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Overstock_Flag]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="Overstock_Flag"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 11]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output].Columns[Overstock_Flag]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[C_Current Stock Quantity]"
+                      cachedDataType="i4"
+                      cachedName="C_Current Stock Quantity"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 3]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Current Stock Quantity]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[C_Unit Cost at Location]"
+                      cachedDataType="numeric"
+                      cachedName="C_Unit Cost at Location"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 8]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output].Columns[C_Unit Cost at Location]" />
+                    <inputColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].Columns[Inventory ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Inventory ID"
+                      externalMetadataColumnId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 0]"
+                      lineageId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output].Columns[Inventory ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 3" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 4" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 5" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 6]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 6" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 7" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 8" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 9]"
+                      dataType="i4"
+                      name="Column 9" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 10]"
+                      dataType="numeric"
+                      name="Column 10"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 11]"
+                      dataType="i4"
+                      name="Column 11" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 12]"
+                      dataType="wstr"
+                      length="1"
+                      name="Column 12" />
+                    <externalMetadataColumn
+                      refId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input].ExternalColumns[Column 13]"
+                      dataType="wstr"
+                      length="1"
+                      name="Column 13" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DF_INVENTORY_RECONCILIATION.Paths[Data Conversion Output]"
+              endId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\DF_INVENTORY_RECONCILIATION.Paths[Derived Column Output]"
+              endId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\DF_INVENTORY_RECONCILIATION\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DF_INVENTORY_RECONCILIATION.Paths[Exception_Output]"
+              endId="Package\DF_INVENTORY_RECONCILIATION\Exception.Inputs[Flat File Destination Input]"
+              name="Exception_Output"
+              startId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Exception_Output]" />
+            <path
+              refId="Package\DF_INVENTORY_RECONCILIATION.Paths[Flat File Source Output]"
+              endId="Package\DF_INVENTORY_RECONCILIATION\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\DF_INVENTORY_RECONCILIATION.Paths[Normal_Output]"
+              endId="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output.Inputs[Flat File Destination Input]"
+              name="Normal_Output"
+              startId="Package\DF_INVENTORY_RECONCILIATION\Conditional Split.Outputs[Normal_Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="252.8,41.6"
+          Id="Package\DF_INVENTORY_RECONCILIATION"
+          TopLeft="148.333325228758,89.2666660459174" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DF_INVENTORY_RECONCILIATION">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="124,41.6"
+          Id="Package\DF_INVENTORY_RECONCILIATION\Exception"
+          TopLeft="274.999995902181,456.999993786216" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DF_INVENTORY_RECONCILIATION\Derived Column"
+          TopLeft="105.999998420477,250.999996259809" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\DF_INVENTORY_RECONCILIATION\Reconciliation_output"
+          TopLeft="17.9999997317791,458.999993160367" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\DF_INVENTORY_RECONCILIATION\Conditional Split"
+          TopLeft="112.999998316169,358.999994650483" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DF_INVENTORY_RECONCILIATION\Data Conversion"
+          TopLeft="95.9999985694886,148.799998271465" />
+        <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\DF_INVENTORY_RECONCILIATION\Inventory_Master"
+          TopLeft="92.9999986141919,60.9999990910292" />
+        <EdgeLayout
+          Id="Package\DF_INVENTORY_RECONCILIATION.Paths[Normal_Output]"
+          TopLeft="165.533331649502,400.599994650483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-58.333331917723,58.3999985098839"
+              Start="0,0"
+              End="-58.333331917723,50.8999985098839">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.7212365081384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.7212365081384"
+                    Point2="0,23.7212365081384"
+                    Point3="-4,23.7212365081384" />
+                  <mssgle:LineSegment
+                    End="-54.333331917723,23.7212365081384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-54.333331917723,23.7212365081384"
+                    Point2="-58.333331917723,23.7212365081384"
+                    Point3="-58.333331917723,27.7212365081384" />
+                  <mssgle:LineSegment
+                    End="-58.333331917723,50.8999985098839" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-72.4367050213615,28.7212365081384,86.540078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_INVENTORY_RECONCILIATION.Paths[Flat File Source Output]"
+          TopLeft="173.09999859184,102.599999091029">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.1999991804362"
+              Start="0,0"
+              End="0,38.6999991804362">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.6999991804362" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,11.3499995902181,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_INVENTORY_RECONCILIATION.Paths[Exception_Output]"
+          TopLeft="214.066664982835,400.599994650483">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122.933330919345,56.3999991357327"
+              Start="0,0"
+              End="122.933330919345,48.8999991357327">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.9088656283285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.9088656283285"
+                    Point2="0,22.9088656283285"
+                    Point3="4,22.9088656283285" />
+                  <mssgle:LineSegment
+                    End="118.933330919345,22.9088656283285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="118.933330919345,22.9088656283285"
+                    Point2="122.933330919345,22.9088656283285"
+                    Point3="122.933330919345,26.9088656283285" />
+                  <mssgle:LineSegment
+                    End="122.933330919345,48.8999991357327" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="12.7166263971725,27.9088656283285,97.500078125,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_INVENTORY_RECONCILIATION.Paths[Derived Column Output]"
+          TopLeft="186.099998368323,292.599996259809">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.3999983906746"
+              Start="0,0"
+              End="0,58.8999983906746">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.8999983906746" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,21.4499991953373,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DF_INVENTORY_RECONCILIATION.Paths[Data Conversion Output]"
+          TopLeft="173.999998569489,190.399998271465">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.39999985098834,60.5999979883432"
+              Start="0,0"
+              End="8.39999985098834,53.0999979883432">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2999989941716" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.2999989941716"
+                    Point2="0,30.2999989941716"
+                    Point3="4,30.2999989941716" />
+                  <mssgle:LineSegment
+                    End="4.39999985098834,30.2999989941716" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.39999985098834,30.2999989941716"
+                    Point2="8.39999985098834,30.2999989941716"
+                    Point3="8.39999985098834,34.2999989941716" />
+                  <mssgle:LineSegment
+                    End="8.39999985098834,53.0999979883432" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
