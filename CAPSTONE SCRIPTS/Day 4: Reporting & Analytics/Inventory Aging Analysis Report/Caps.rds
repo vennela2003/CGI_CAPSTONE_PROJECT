@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="Caps">
-  <ConnectionProperties>
-    <Extension>OLEDB</Extension>
-    <ConnectString>Provider=OraOLEDB.Oracle.1;Data Source=localhost:1521/xepdb1</ConnectString>
-  </ConnectionProperties>
-  <DataSourceID>5079d8a6-bb1e-497b-bf3e-a63549bd3ee9</DataSourceID>
-</RptDataSource>
